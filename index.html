@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Nolberto Gomez1</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilo personalizado -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NABZBLOG</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                    <!-- Botón para abrir el formulario de nueva entrada -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addPostModal">Nueva Entrada</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header style="background-image: url('/Blog/img/banner.jfif'); background-size: cover; background-position: center; text-align: center; padding: 100px 0; position: relative;">
+        <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; display: inline-block;">
+          <h1 style="color: white;">Bienvenido a NABZBLOG</h1>
+          <p style="color: white;">Compartiendo el desarrollo de la tecnologia</p>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8" id="postsContainer">
+                <!-- Entrada 0: Bienvenidos a mi Blog -->
+                <div class="card mb-4 category-all">
+                    <img class="card-img-top" src="/Blog/img/Blog Tencologia.jpeg" alt="BLog">
+                    <div class="card-body">
+                        <h2 class="card-title">Bienvenidos a mi Blog</h2>
+                        <p class="card-text">
+                           Bienvenidos a NABZBLOG en donde estaremos compartiendo noticias e informacion sobre tecnologia,desarrollo de softwares y muchos otros temas mas.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 1: ¿Qué es el Hardware? -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/hardware.jpg" alt="Imagen de hardware">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Qué es el Hardware?</h2>
+                        <p class="card-text">
+                            El Hardware es un conjunto de materiales tangibles de un computador o de un sistema informatico,este viene de la palabra HARD ( rigido ) y WARE ( material ) es decir material rigido, este incluye todas las partes mecanicas,electricas y electronicas.<br><br>El termino empezo a usarse a en el siglo XV para los utensilios y herramientas fabricados con metales duras, hoy en dia desde  el surgimiento de las computadoras en la decada de 1940 se empezo a denominar hardware a los componentes fisicos para distinguinlos de los logicos.<br><br>
+                            <h6><b>Para que sirve?</b></h6>
+                            <br>
+                            El hardware sirve para facilitarnos el procesamiento de la informacion y tener acceso al software del equipo, este  puente intermedio entre el equipo y el usuario nos permite emitir las ordenes necesarias para que el equipo realice las tareas que deseamos hacer, sin el hardware no podriamos hacer uso de las aplicaciones y programas que necesitamos para trabajar, estudiar o entretenernos.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 2: Tipos de Hardware -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/tipos de hardwar.png" alt="Imagen de tipos de hardware">
+                    <div class="card-body">
+                        <h2 class="card-title">Tipos de Hardware</h2>
+                        <p class="card-text">
+                            Como vimos en una entrada anterior ya miramos lo que es el Hardware,de donde proviene y para que sirve,ahora en esta entrada vamos a ver que existes diferentes tipos de hardware y como se clasifican, estas clasificaciones surgen dependiendo del uso que se les da a cada uno siendo estos los mas comunes y en los que categorizamos el hardware:<br><br>
+                            <h6><b>Tipos de Hardware</b></h6>
+                            <br>
+                            Existen Diferentes tipos de Hardware,pero en este blog las organizaremos en 4 categorias principales:<br>
+                            <ul>
+                                <li>Dispositivos De Salida</li>
+                                <li>Dispositivos De Entrada</li>
+                                <li>Componentes Internos</li>
+                                <li>Dispositivos de Almacenamiento</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 2.1:Dispositivos de Salida -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/Dispositivos de Salida.png" alt="Imagen de Dispositivos de salida">
+                    <div class="card-body">
+                        <h2 class="card-title">Dispositivos de Salida</h2>
+                        <p class="card-text">
+                            Los Dispositivos de salida o tambien conocidos como perifericos de entrada ( OUTPUT) son aquellos aparatos que permiten la extracion de informacion de las computadoras o sistemas informaticos,estos traducen la informacion a formatos visuales,sonoros, impresos o de cualquier naturaleza y que puedan ser comprendidos por el usuario.<br>
+                            <br>
+                            <b>Caracteristicas:</b>
+                            <ul>
+                                <li>Son elementos Externos que se pueden conectar al equipo ya sea de forma alambrica o inalambrica.</li>
+                                <li>Replican informacion como audio,imagen,textos y graficos.</li>
+                                <li>suelen ser imprescindibles para el uso del equipo.</li>
+                                <li>Son faciles de usar y se van actualizando de acuerdo a los desarrollos Tecnologicos.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 2.2:Dispositivos de Entrada -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/Dispositivos de Entraada.webp" alt="Imagen de Dispositivos de entrada">
+                    <div class="card-body">
+                        <h2 class="card-title">Dispositivos de Entrada </h2>
+                        <p class="card-text">
+                            Los dispositivos de entrada o de alimentacion (imput) son aquellos que permiten ingresar informacion al sistema,ya sea proviniente del usuario o de otra computadora, estos dispositivos envian impulsos electricos que luego la computadora procesa y almacena,Estos son fundamentales para que poder interactuar con la computadora.<br>
+                            <br>
+                            <b>Caracteristicas:</b>
+                            <ul>
+                                <li>Permiten ingresar informacion en distintos formatos como audio,imagen,textos,entre otros.</li>
+                                <li>traducen todos los datos por medio de impulsos.</li>
+                                <li>Son indispensables para el uso de la computadora y faciles de usar.</li>
+                                <li>Se adaptan deacuerdo a los diferentes desarrollos tecnologicos.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+                
+                <!-- Entrada 2.3:Componentes Internos -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/componentes internos.jpg" alt="Imagen de Componentes Internos">
+                    <div class="card-body">
+                        <h2 class="card-title">Componentes Internos</h2>
+                        <p class="card-text">
+                            Los componentes internos de un computador son aquellos que se encuentran "dentro" del CPU y su funcionanmiento es totalmente esencial para el correcto uso del sistema informatico.<br>
+                            <ul> Dentro de los componentes internos encontramos:</ul>
+                            <li>Placa Base o Motherboard:<br>
+                            Es la tarjeta principal de la CPU en donde se encuentra el procesador,las ranuras de la memoria RAM, los modulos ROM, y donde se conectan los demas componentes.</li>
+                            <li>Procesador:<br>
+                             Es in circuito electronico que actua como el cerebro logico y aritmetico de la computadora,en este es donde se lleva a cabo los calculos que sostienen el software entero,es reconocible porque esta debajo del disipador o ventilador ya que necesitan refrigeracion constante para evitar sobrecarga.</li>
+                            <li>Memoria RAM:<br>
+                            Random Access Memorys o memoria de acceso aleatorio  son una serie de modulos que se conectan a la placa base,en donde van los programas a ejecutarse tanto los activados por el equipo como los activados por el sistema,todo lo que se encuentre en la memoria RAM se borrara cuando el sistema se apague o se reinicie.</li>
+                    <br>
+                    
+            
+                    
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 2.4: Dispositivos de Almacenamiento -->
+                <div class="card mb-4 category-hardware">
+                    <img class="card-img-top" src="/Blog/img/dispositivos de almacenamiento.jpg" alt="Imagen de Dispositivos de Almacenamiento">
+                    <div class="card-body">
+                        <h2 class="card-title">Dispositivos de Almacenamiento</h2>
+                        <p class="card-text">
+                            Los dispositivos de almacenamiento son una parte integral del hardware de un computador, y se encargan de guardar de forma permanente o temporal todos los datos y programas. Estos dispositivos permiten que la información se guarde y se recupere en cualquier momento, siendo esenciales para la operatividad del sistema. Existen varios tipos de dispositivos de almacenamiento, cada uno con características y usos específicos:
+                            <ul>
+                                <li><strong>Disco Duro (HDD):</strong> 
+                                El disco duro es el dispositivo de almacenamiento más común y tradicional. Funciona mediante platos giratorios y un cabezal de lectura/escritura magnético. Es ideal para almacenar grandes cantidades de datos, como archivos del sistema operativo, programas y documentos personales.</li>
+                                <li><strong>Unidad de Estado Sólido (SSD):</strong> 
+                                Las unidades de estado sólido son dispositivos de almacenamiento que utilizan memoria flash en lugar de discos giratorios. Son mucho más rápidas que los discos duros tradicionales, permitiendo tiempos de arranque más cortos y una mejor velocidad en la ejecución de programas. Además, son más resistentes a los golpes y consumen menos energía.</li>
+                                <li><strong>Unidades Ópticas (CD/DVD/Blu-ray):</strong> 
+                                Aunque menos comunes hoy en día, las unidades ópticas permiten leer y escribir datos en discos ópticos como CDs, DVDs o Blu-rays. Son útiles para almacenar datos de respaldo, archivos multimedia, o para distribuir software.</li>
+                                <li><strong>Memorias USB y Tarjetas de Memoria:</strong> 
+                                Estos dispositivos portátiles son muy convenientes para el almacenamiento temporal y la transferencia de archivos entre diferentes dispositivos. Las memorias USB, en particular, han revolucionado la manera en que manejamos y transportamos nuestros datos.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 3: ¿Qué es el Software? -->
+                <div class="card mb-4 category-software">
+                    <img class="card-img-top" src="/Blog/img/Software.webp" alt="Imagen de software">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Qué es el Software?</h2>
+                        <p class="card-text">
+                            El software es el conjunto de instrucciones, datos o programas utilizados para operar computadoras y ejecutar tareas específicas. A diferencia del hardware, que es el componente físico del computador, el software es intangible. Es lo que permite que el hardware realice funciones determinadas, como ejecutar aplicaciones, navegar por internet o jugar videojuegos.
+                            <br><br>
+                            El software se puede dividir en dos categorías principales: <strong>software de sistema</strong> y <strong>software de aplicación</strong>. El software de sistema incluye los programas que son fundamentales para que el hardware funcione, como los sistemas operativos (por ejemplo, Windows, macOS, Linux) y los controladores de dispositivos. El software de aplicación, por otro lado, incluye programas diseñados para realizar tareas específicas para el usuario final, como procesadores de texto, navegadores web, y aplicaciones móviles.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 4: Tipos de Software -->
+                <div class="card mb-4 category-software">
+                    <img class="card-img-top" src="/Blog/img/tipos de software.jpg" alt="Imagen de software">
+                    <div class="card-body">
+                        <h2 class="card-title">Tipos de Software</h2>
+                        <p class="card-text">
+                            Existen diferentes tipos de software, cada uno diseñado para cumplir con funciones específicas dentro del ecosistema de una computadora. A continuación, se describen los tipos más comunes:
+                            <ul>
+                                <li><strong>Software del Sistema:</strong> 
+                                Este tipo de software incluye el sistema operativo y todos los programas que permiten que el hardware funcione y se comunique con otros programas. El sistema operativo, como Windows o Linux, es el encargado de gestionar los recursos del hardware y proporcionar una interfaz para que los usuarios interactúen con el sistema.</li>
+                                <li><strong>Software de Aplicación:</strong> 
+                                Este software se utiliza para realizar tareas específicas que no están directamente relacionadas con el funcionamiento del hardware. Ejemplos incluyen procesadores de texto, hojas de cálculo, programas de diseño gráfico, navegadores web, y aplicaciones móviles.</li>
+                                <li><strong>Software de Programación:</strong> 
+                                El software de programación incluye herramientas que los desarrolladores utilizan para crear otros programas. Estos incluyen editores de código, compiladores, intérpretes y depuradores. Lenguajes de programación como Python, Java, y C++ son utilizados para escribir el software que después es ejecutado por el hardware.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 5: Desarrollo De Software -->
+                <div class="card mb-4 category-software">
+                    <img class="card-img-top" src="/Blog/img/desarrollo de software.png" alt="Imagen de desarrollo">
+                    <div class="card-body">
+                        <h2 class="card-title">Desarrollo De Software</h2>
+                        <p class="card-text">
+                            El desarrollo de software es el proceso de diseñar, crear, implementar y mantener aplicaciones y otros tipos de software. Este proceso implica un conjunto de actividades que transforman los requisitos del usuario en un producto final que puede ser utilizado en diferentes plataformas y dispositivos. El desarrollo de software es una disciplina clave en la informática y requiere conocimientos en programación, diseño de software, y gestión de proyectos.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+
+                <!-- Entrada 6: Etapas del Desarrollo de Software -->
+                <div class="card mb-4 category-software">
+                    <img class="card-img-top" src="/Blog/img/desarrollo etapas.jpg" alt="Imagen de desarrollo">
+                    <div class="card-body">
+                        <h2 class="card-title">Etapas del Desarrollo de Software</h2>
+                        <p class="card-text">
+                            El desarrollo de software sigue un ciclo de vida estructurado conocido como el <strong>Ciclo de Vida del Desarrollo de Software (SDLC, por sus siglas en inglés)</strong>. Este ciclo se compone de varias etapas, cada una crucial para garantizar que el software final cumpla con los requisitos y expectativas del usuario:
+                            <ul>
+                                <li><strong>Análisis de Requisitos:</strong> 
+                                En esta etapa se identifican y documentan las necesidades y expectativas del usuario. El objetivo es obtener una comprensión clara de lo que el software debe hacer.</li>
+                                <li><strong>Diseño del Software:</strong> 
+                                Aquí se define la arquitectura del software, se diseñan las interfaces de usuario, y se establecen las bases para la estructura de datos y algoritmos que se implementarán.</li>
+                                <li><strong>Desarrollo o Codificación:</strong> 
+                                Esta es la fase en la que se escribe el código fuente del software utilizando un lenguaje de programación adecuado. Los desarrolladores traducen el diseño en un lenguaje que la computadora pueda entender.</li>
+                                <li><strong>Pruebas o Verificación:</strong> 
+                                Una vez desarrollado el software, es necesario realizar pruebas para asegurarse de que cumple con los requisitos y no contiene errores. Las pruebas pueden incluir pruebas unitarias, de integración, y de aceptación por parte del usuario.</li>
+                                <li><strong>Documentación:</strong> 
+                                La documentación es esencial para asegurar que otros desarrolladores, usuarios finales, y personal de soporte puedan entender y utilizar el software correctamente. Incluye manuales de usuario, guías de instalación, y documentación técnica.</li>
+                                <li><strong>Mantenimiento:</strong> 
+                                Después de que el software se entrega y se despliega, se realiza el mantenimiento para corregir errores que no se detectaron durante las pruebas, y para actualizar el software en respuesta a cambios en el entorno o nuevas necesidades del usuario.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Publicado el 26 de agosto, 2024 por <a href="#">Nolberto Gomez</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4 sidebar">
+                <!-- Search Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Buscar</h5>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar..." id="searchInput">
+                            <button class="btn btn-secondary" type="button" id="searchButton">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Categorías</h5>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#" data-category="all" class="category-filter">Todas</a></li>
+                                    <li><a href="#" data-category="hardware" class="category-filter">Hardware</a></li>
+                                    <li><a href="#" data-category="software" class="category-filter">Software</a></li>
+                                    <li><a href="#" data-category="development" class="category-filter">Desarrollo</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#" data-category="technology" class="category-filter">Tecnología</a></li>
+                                    <li><a href="#" data-category="news" class="category-filter">Noticias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Sobre Mí</h5>
+                    <div class="card-body">
+                        Soy un apasionado del desarrollo web y este es mi espacio para compartir mis pensamientos, proyectos y experiencias.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar nueva entrada -->
+<div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPostModalLabel">Agregar Nueva Entrada</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addPostForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Título</label>
+                        <input type="text" class="form-control" id="postTitle" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postCategory" class="form-label">Categoría</label>
+                        <select class="form-select" id="postCategory" required>
+                            <option value="hardware">Hardware</option>
+                            <option value="software">Software</option>
+                            <option value="development">Desarrollo</option>
+                            <option value="technology">Tecnología</option>
+                            <option value="news">Noticias</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postContent" class="form-label">Contenido</label>
+                        <textarea class="form-control" id="postContent" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postImage" class="form-label">Imagen</label>
+                        <input type="file" class="form-control" id="postImage" accept="image/*" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Entrada</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="m-0">Copyright &copy; NABZBLOG 2024</p>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
