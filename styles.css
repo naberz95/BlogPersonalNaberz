@@ -1,11 +1,49 @@
-/* styles.css */
 
-/* Estilo para hacer que la navbar sea fija en la parte superior */
-.navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030; /* Asegúrate de que esté por encima de otros contenidos */
+/* Importa la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* Estilo para la barra de navegación personalizada */
+.custom-navbar {
+    width: 30%; /* Ajusta el ancho al 30% */
+    margin: 0 auto; /* Centro la navbar horizontalmente */
+    background-color: transparent !important; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    text-align: center; /* Centra el contenido de la navbar */
+    position: relative; /* Asegura que el fondo transparente se muestre correctamente */
+    z-index: 1; /* Asegura que la navbar esté encima de otros elementos */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: #ffffff !important; /* Letras blancas para que resalten sobre el fondo negro */
+}
+
+.custom-navbar .nav-link {
+    font-weight: bold; /* Letra en negrita para mayor visibilidad */
+    font-size: 1.2rem; /* Tamaño de fuente ajustado */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Sombra sutil para efecto flotante */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff !important; /* Mantiene el color blanco al hacer hover */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Sombra más fuerte al hacer hover */
+}
+
+@media (max-width: 992px) {
+    .custom-navbar {
+        width: 90%; /* En pantallas pequeñas, ocupa más espacio */
+    }
+}
+
+
+/* Fondo del cuerpo con líneas verticales tipo felpudo */
+body {
+    background-color: #000; /* Fondo negro */
+    background-image: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px); /* Líneas verticales */
+    background-size: 10px 100%; /* Tamaño de las líneas */
+    color: #fff; /* Color de texto blanco */
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Espacio para compensar la altura de la navbar fija */
@@ -13,144 +51,274 @@
     padding-top: 56px; /* Ajusta esto según la altura de tu navbar */
 }
 
-/* Estilo para mantener el sidebar fijo */
-.sidebar {
-    position: sticky;
-    top: 0;
+/* Estilo del header con el texto blanco claro */
+header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 200px; /* Altura del header, ajustable */
+    text-align: center; /* Asegura que el texto esté centrado */
 }
 
-/* Fondo con gradiente oscuro */
-body {
-    background: radial-gradient(circle, #000000 0%, #333333 100%);
-    color: #fff; /* Color de texto general */
+header div {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; /* Mantiene el contenido compacto */
+}
+
+/* Estilos del título */
+header h1 {
+    font-family: 'Poppins', sans-serif; /* Fuente estilizada */
+    color: #ffffff; /* Texto blanco puro */
+    font-size: 3rem; /* Tamaño grande */
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Estilos del subtítulo */
+header p {
+    font-family: 'Poppins', sans-serif; /* Misma fuente estilizada */
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.5rem; /* Tamaño más pequeño */
+    margin: 0;
 }
 
 /* Estilo para los encabezados */
-h1, h2, h3, h4, h5, {
-    color: #00f; /* Azul para los encabezados */
+/* Estilos de los encabezados */
+h1, h2, h3, h4, h5 {
+    color: #ffffff; /* Azul vibrante para los encabezados */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y tecnológica */
+    font-weight: 700; /* Fuente en negrita */
 }
 
-h6{
-    color:#000;
+p{
+color:#f0f0f0;
 }
-/* Fondo para tarjetas y contenedores */
+
+h6 {
+    color: #f0f0f0; /* Color claro para h6 para contrastar con el fondo negro */
+    font-family: 'Roboto', sans-serif; /* Mantén la misma fuente para consistencia */
+}
+
+/* Opcional: ajustar el espaciado de los encabezados para mejor diseño */
+h1 {
+    font-size: 3rem; /* Tamaño grande para h1 */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamaño para h2 */
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 2rem; /* Tamaño para h3 */
+    margin-bottom: 16px;
+}
+
+h4 {
+    font-size: 1.75rem; /* Tamaño para h4 */
+    margin-bottom: 14px;
+}
+
+h5 {
+    font-size: 1.5rem; /* Tamaño para h5 */
+    margin-bottom: 12px;
+}
+/* Estilo para las tarjetas en la sección "Sobre Mí" y "Categorías" */
 .card {
-    background-color: #fff; /* Fondo blanco para las tarjetas */
-    border: 1px solid #ddd; /* Borde gris claro */
-    color: #000; /* Color de texto negro */
+    background-color: #000; /* Fondo negro */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    color: #fff; /* Color del texto blanco */
 }
 
-/* Ajuste de color para el texto dentro de las tarjetas */
-.card-body, .card-footer {
-    color: #000; /* Texto negro para el contenido de la tarjeta */
+/* Asegúrate de que la tarjeta tenga un contenedor flex en la parte del cuerpo */
+/* Añadir esta clase específica para centrar solo la imagen en la tarjeta "Sobre Mí" */
+.card-body .about-me-img-container {
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
 }
 
-/* Estilo para los enlaces dentro de las tarjetas */
+/* Estilo específico para las imágenes dentro de la tarjeta "Sobre Mí" */
+.card-body .about-me-img-container img {
+    max-height: 150px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajustar la imagen para cubrir el área */
+    border-radius: 50%; /* Hace la imagen redonda */
+}
+
+/* Estilo para la sección de categorías */
+.card-body ul {
+    display: grid; /* Utiliza grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 4 columnas mínimas de 150px */
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margin predeterminado */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.card-body ul li {
+    margin: 0; /* Elimina el margin de los elementos de la lista */
+}
+
+.card-body ul li a {
+    display: block; /* Asegura que el enlace ocupe todo el espacio del elemento */
+    padding: 10px; /* Espacio interior del enlace */
+    background-color: #333; /* Fondo de los enlaces */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centra el texto dentro del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.card-body ul li a:hover {
+    background-color: #444; /* Cambia el color de fondo al hacer hover */
+}
+
+/* Estilo para el encabezado de la tarjeta */
+.card-header {
+    background: transparent; /* Fondo transparente para el encabezado */
+    color: #fff; /* Color del texto del encabezado */
+}
+
+/* Estilo para el footer de la tarjeta */
+.card-footer {
+    background-color: #000; /* Fondo negro para el footer */
+    color: #f0f0f0; /* Texto blanco */
+    border-top: 1px solid #444; /* Borde superior sutil */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+}
+
 .card-footer a {
-    color: #00f; /* Azul para enlaces en el footer de las tarjetas */
+    color: #4a90e2; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado en el enlace */
 }
 
 .card-footer a:hover {
-    color: #0cc; /* Azul más claro al pasar el ratón */
-}
-
-/* Estilo para enlaces generales */
-a {
-    color: #00f; /* Azul para enlaces */
-}
-
-a:hover {
-    color: #0cc; /* Azul más claro al pasar el ratón */
+    text-decoration: underline; /* Subrayar al pasar el ratón */
 }
 
 /* Estilo para el footer */
 footer {
-    background-color: #222; /* Fondo gris oscuro para el pie de página */
-    color: #ccc; /* Color de texto gris claro */
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+    color: #f0f0f0;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid #444;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #f0f0f0;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4a90e2; /* Cambia el color al pasar el ratón por encima */
 }
 
 /* Estilo para etiquetas y elementos de formulario */
 .form-label {
-    color: #fff; /* Color blanco para las etiquetas */
+    color: #fff;
 }
 
 /* Estilo para los campos de formulario */
 .form-control, .form-select {
-    background-color: #333; /* Gris oscuro para el fondo de los campos de entrada */
-    color: #fff; /* Color blanco para el texto */
-    border: 1px solid #444; /* Borde gris oscuro */
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
 }
 
 .form-control::placeholder, .form-select::placeholder {
-    color: #999; /* Color gris claro para el texto del placeholder */
+    color: #999;
 }
 
 /* Estilo para los botones dentro de los formularios */
 .btn, .btn-secondary {
-    background-color: #444; /* Gris oscuro */
-    color: #fff; /* Color blanco para el texto */
-    border: 1px solid #555; /* Borde ligeramente más claro */
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #555;
 }
 
 .btn:hover, .btn-secondary:hover {
-    background-color: #555; /* Gris más claro al pasar el ratón */
+    background-color: #555;
 }
 
 /* Estilo específico para el modal */
 .modal-content {
-    background-color: #222; /* Fondo gris oscuro para el contenido del modal */
-    color: #fff; /* Color de texto blanco */
+    background-color: #222;
+    color: #fff;
 }
 
 .modal-header, .modal-body, .modal-footer {
-    color: #fff; /* Color blanco para el texto en todas las secciones del modal */
+    color: #fff;
 }
 
 .modal-header .modal-title, .modal-body label, .modal-body .form-control, .modal-body .form-select {
-    color: #fff; /* Color blanco para los títulos y etiquetas */
+    color: #fff;
 }
 
 .modal-body .form-control, .modal-body .form-select {
-    background-color: #333; /* Gris oscuro para el fondo de los campos de entrada en el modal */
-    border: 1px solid #444; /* Borde gris oscuro */
+    background-color: #333;
+    border: 1px solid #444;
 }
 
 .modal-body .form-control::placeholder, .modal-body .form-select::placeholder {
-    color: #999; /* Color gris claro para el texto del placeholder en el modal */
+    color: #999;
 }
 
 /* Estilo para el texto del footer de la tarjeta */
 .card-footer {
-    color: #666; /* Gris medio para el texto "Publicado el ..." */
+    color: #666;
 }
 
 /* Estilo para el texto del card-footer específicamente */
 .card-footer .text-muted {
-    color: #888; /* Gris más claro para el texto "Publicado el ..." */
-}
-/* Estilo para el footer */
-footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); /* Gradiente oscuro para un toque moderno */
-    color: #f0f0f0; /* Color de texto gris claro */
-    padding: 30px 0; /* Espaciado interno para mayor prominencia */
-    text-align: center; /* Alinear texto al centro */
-    border-top: 2px solid #444; /* Borde superior sutil */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+    color: #888;
 }
 
-/* Estilo para el texto del footer */
-footer p {
-    margin: 0; /* Eliminar márgenes */
-    font-size: 14px; /* Tamaño de fuente más pequeño para un look más elegante */
+/* Estilo específico para la sección "Sobre Mí" */
+.card-body img {
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* Hace la imagen redonda */
 }
 
-/* Estilo para los enlaces dentro del footer */
-footer a {
-    color: #4a90e2; /* Azul brillante para los enlaces */
-    text-decoration: none; /* Quitar subrayado */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Ocultar el botón por defecto */
+    background-color: #000000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
-footer a:hover {
-    text-decoration: underline; /* Subrayar al pasar el ratón */
-    color: #357abd; /* Azul más oscuro al pasar el ratón */
+#scrollToTopBtn:hover {
+    background-color: #000000; /* Color del fondo al pasar el ratón */
+}
+
+#scrollToTopBtn:active {
+    transform: scale(0.95); /* Efecto de presionar el botón */
 }

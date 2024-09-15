@@ -1,8 +1,15 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Manejo del clic en las categorías
     document.querySelectorAll('.category-filter').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const category = this.getAttribute('data-category');
+            filterPostsByCategory(category);
+        });
+    });
+
+    // Manejo del clic en las categorías de la barra de navegación
+    document.querySelectorAll('.navbar .dropdown-item').forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault();
             const category = this.getAttribute('data-category');
@@ -49,17 +56,21 @@ document.addEventListener('DOMContentLoaded', function() {
         var addPostModal = bootstrap.Modal.getInstance(document.getElementById('addPostModal'));
         addPostModal.hide();
     });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    // Manejo del botón de búsqueda
-    document.getElementById('searchButton').addEventListener('click', function() {
-        const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-        document.querySelectorAll('#postsContainer .card').forEach(function(post) {
-            const title = post.querySelector('.card-title').textContent.toLowerCase();
-            if (title.includes(searchTerm)) {
-                post.style.display = 'block';
-            } else {
-                post.style.display = 'none';
-            }
-        });
+    // Muestra el botón cuando se desplaza hacia abajo
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Muestra el botón cuando el desplazamiento es mayor a 300px
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Maneja el clic en el botón para volver arriba
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
