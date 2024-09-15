@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de Git - BlogNabz</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilo personalizado -->
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" data-category="all">Todas</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="hardware">Hardware</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="software">Software</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="development">Desarrollo</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="technology">Tecnología</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="news">Noticias</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="juegos">Juegos</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="tutorial-git">Tutorial Git</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutMe">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#addPostModal">Nueva Entrada</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; display: inline-block;">
+          <h1 style="color: white;">Bienvenido a NABZBLOG</h1>
+          <p style="color: white;">Compartiendo el desarrollo de la tecnología</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8" id="postsContainer">
+                <!-- Entrada 0: Bienvenidos a mi Blog -->
+                <div class="card mb-4 category-all">
+                    <img class="card-img-top" src='/img/BlogInicial.jpeg' alt="Blog">
+                    <div class="card-body">
+                        <h2 class="card-title">Bienvenidos a mi Blog</h2>
+                        <p class="card-text">
+                            Nos alegra mucho tenerte aquí en NABZBLOG. Este blog nació como una tarea de introducción a la ingeniería, pero nuestra intención es seguir expandiendo y enriqueciendo el contenido con noticias e información sobre tecnología, desarrollo de software y muchos otros temas apasionantes. ¡Explora, aprende y únete a la conversación!
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Publicado el 26 de agosto, 2024 por Nolberto Gomez</p>
+                    </div>
+                </div>
+
+                <!-- Bloque: ¿Qué es Git? -->
+                <div class="card mb-4 category-tutorial-git">
+                    <img class="card-img-top" src='/img/git.png' alt="GIT">
+                    <div class="card-body">
+                        <h2 class="card-title">¿Qué es Git?</h2>
+                        <p class="card-text">
+                            Git es un sistema de control de versiones distribuido que permite a los desarrolladores llevar un registro de los cambios en el código fuente durante el desarrollo de software. Es una herramienta fundamental para la colaboración en proyectos de programación, ya que facilita la gestión de versiones y la integración de contribuciones de diferentes colaboradores.
+                        </p>
+                        <p>
+                            Al usar Git, puedes realizar las siguientes acciones:
+                        </p>
+                        <ul>
+                            <li><strong>Controlar Versiones:</strong> Guardar y gestionar el historial de cambios en tu código fuente.</li>
+                            <li><strong>Colaborar:</strong> Trabajar en equipo y fusionar cambios de diferentes desarrolladores.</li>
+                            <li><strong>Crear Ramas:</strong> Desarrollar nuevas características o correcciones en ramas separadas, sin afectar el código principal.</li>
+                            <li><strong>Gestionar Conflictos:</strong> Resolver conflictos que surgen cuando múltiples desarrolladores realizan cambios en el mismo archivo.</li>
+                        </ul>
+                        <p>
+                            Git se utiliza en combinación con plataformas de hospedaje de código como GitHub, GitLab y Bitbucket, que proporcionan servicios de almacenamiento en la nube y facilitan la colaboración en proyectos de software.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Publicado el 15 Septiembre, 2024 por Nolberto Gomez</p>
+                    </div>
+                </div>
+
+                <!-- Nueva Entrada: Tutorial de Git -->
+                <div class="card mb-4 category-tutorial-git">
+                    <img class="card-img-top" src='/img/git-github.png' alt="GIT">
+                    <div class="card-body">
+                        <h2 class="card-title">Cómo Conectar tu Repositorio Local con GitHub</h2>
+                        <p class="card-text">
+                            En este tutorial, aprenderás cómo conectar un repositorio local con un repositorio remoto en GitHub. Esto es útil cuando ya tienes un proyecto y deseas mantenerlo sincronizado con GitHub.
+                        </p>
+
+                        <h3>Pasos para Conectar tu Repositorio Local con GitHub</h3>
+                        <ol>
+                            <li>
+                                <h4>Conectar tu Repositorio Local con GitHub</h4>
+                                <p>Para vincular tu repositorio local con un repositorio remoto existente en GitHub, usa el siguiente comando:</p>
+                                <pre><code>git remote add origin (Aqui añades la URL de tu proyecto de github)
+                                </code></pre>
+                                <p>Este comando configura el repositorio remoto como `origin` en tu repositorio local.</p>
+                            </li>
+
+                            <li>
+                                <h4>Verificar la Conexión</h4>
+                                <p>Para asegurarte de que tu repositorio local está correctamente vinculado con el remoto, ejecuta:</p>
+                                <pre><code>git remote -v
+                                </code></pre>
+                                <p>Este comando te mostrará las URLs de los repositorios remotos asociados a tu repositorio local.</p>
+                            </li>
+
+                            <li>
+                                <h4>Empujar tus Cambios al Repositorio Remoto</h4>
+                                <p>Para subir tus cambios locales al repositorio remoto en GitHub, utiliza el siguiente comando:</p>
+                                <pre><code>git push -u origin main
+                                </code></pre>
+                                <p>Este comando sube tus commits a la rama principal del repositorio remoto. Si estás trabajando en una rama diferente, reemplaza <code>main</code> con el nombre de tu rama.</p>
+                            </li>
+                        </ol>
+
+                        <h4>Ejemplo Completo:</h4>
+                        <pre><code>git remote add origin https://github.com/naberz95/Proyecto-integrador-P1.git
+            git remote -v
+            git push -u origin main
+                        </code></pre>
+                        <img src="ruta/a/tu/captura-remoto.png" alt="Agregar repositorio remoto" class="img-fluid">
+
+                        <h3>Conclusión</h3>
+                        <p>Conectar tu repositorio local con un repositorio remoto en GitHub es crucial para colaborar con otros y mantener tu código seguro. Con los pasos anteriores, deberías estar listo para gestionar tu código y colaborar en proyectos de manera efectiva. Para más detalles, consulta la <a href="https://git-scm.com/doc" target="_blank">documentación oficial de Git</a>.</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Publicado el 15 Septiembre, 2024 por Nolberto Gomez</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Categorías</h5>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="#" data-category="all" class="category-filter">Todas</a></li>
+                            <li><a href="#" data-category="hardware" class="category-filter">Hardware</a></li>
+                            <li><a href="#" data-category="software" class="category-filter">Software</a></li>
+                            <li><a href="#" data-category="development" class="category-filter">Desarrollo</a></li>
+                            <li><a href="#" data-category="technology" class="category-filter">Tecnología</a></li>
+                            <li><a href="#" data-category="news" class="category-filter">Noticias</a></li>
+                            <li><a href="#" data-category="juegos" class="category-filter">Juegos</a></li>
+                            <li><a href="#" data-category="tutorial-git" class="category-filter">Tutorial Git</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sobre Mí Widget -->
+                <!-- Card "Sobre Mí" con imagen arriba del texto -->
+                <div class="card my-4 about-me-card" id="aboutMe">
+                    <h5 class="card-header">Sobre Mí</h5>
+                    <div class="card-body">
+                        <div class="about-me-img-container">
+                            <img src='/img/Yo.jpg' alt="Sobre Mí" class="img-fluid rounded-circle">
+                        </div>
+                        Mi nombre es Nolberto Gomez, soy un apasionado de la tecnología, el desarrollo y los videojuegos. Actualmente soy estudiante de Ingeniería de Software y Datos de la UI Digital de Medellín, Colombia. Soy de la ciudad de Santiago de Cali y el propósito de este blog es compartir información y noticias con todos ustedes, además de compartir mis proyectos, experiencias y pensamientos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar nueva entrada -->
+    <div class="modal fade" id="addPostModal" tabindex="-1" aria-labelledby="addPostModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPostModalLabel">Agregar Nueva Entrada</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addPostForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="postTitle" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="postTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postCategory" class="form-label">Categoría</label>
+                            <select class="form-select" id="postCategory" required>
+                                <option value="hardware">Hardware</option>
+                                <option value="software">Software</option>
+                                <option value="development">Desarrollo</option>
+                                <option value="technology">Tecnología</option>
+                                <option value="news">Noticias</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postContent" class="form-label">Contenido</label>
+                            <textarea class="form-control" id="postContent" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="postImage" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="postImage" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Entrada</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button id="scrollToTopBtn" class="btn btn-primary">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="m-0">Copyright &copy; NABZBLOG 2024</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/naberz95/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/naberzx95/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nolberto-gomez/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/naberz95" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@Naberz" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
