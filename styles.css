@@ -46,14 +46,6 @@ body {
     min-height: 100vh;
 }
 
-.normal-img {
-    display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    height: auto; /* Mantiene la proporción original de la imagen */
-   
-}
-
 /* Espacio para compensar la altura de la navbar fija */
 .content {
     padding-top: 56px; /* Ajusta esto según la altura de tu navbar */
@@ -330,12 +322,23 @@ footer p {
 #scrollToTopBtn:active {
     transform: scale(0.95); /* Efecto de presionar el botón */
 }
+.paso5-img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+    max-height: 100%; /* Asegura que la imagen no exceda el alto del contenedor */
+}
+
+
 .normal-img {
     display: block; /* Asegura que la imagen se comporte como un bloque */
     margin: 0 auto; /* Centra la imagen horizontalmente */
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    width: 80%; /* Ajusta el porcentaje según el tamaño deseado */
     height: auto; /* Mantiene la proporción original de la imagen */
     border-radius: 0; /* Elimina bordes redondeados si los hubiera */
 }
+
+
 
 
