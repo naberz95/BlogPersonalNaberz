@@ -46,6 +46,14 @@ body {
     min-height: 100vh;
 }
 
+.normal-img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+   
+}
+
 /* Espacio para compensar la altura de la navbar fija */
 .content {
     padding-top: 56px; /* Ajusta esto según la altura de tu navbar */
@@ -146,7 +154,7 @@ h5 {
 .card-body .about-me-img-container img {
     max-height: 150px; /* Altura máxima de la imagen */
     object-fit: cover; /* Ajustar la imagen para cubrir el área */
-    border-radius: 50%; /* Hace la imagen redonda */
+   
 }
 
 /* Estilo para la sección de categorías */
@@ -296,7 +304,7 @@ footer p {
 .card-body img {
     max-height: 150px;
     object-fit: cover;
-    border-radius: 50%; /* Hace la imagen redonda */
+     /* Hace la imagen redonda */
 }
 
 #scrollToTopBtn {
@@ -322,3 +330,12 @@ footer p {
 #scrollToTopBtn:active {
     transform: scale(0.95); /* Efecto de presionar el botón */
 }
+.normal-img {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 0; /* Elimina bordes redondeados si los hubiera */
+}
+
+
