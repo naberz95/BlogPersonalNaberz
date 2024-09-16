@@ -114,7 +114,8 @@
                         <h3>Pasos para Conectar tu Repositorio Local con GitHub</h3>
                         <ol>
                             <li>
-                                <h4>Conectar tu Repositorio Local con GitHub</h4>
+                                <h4>Conectar tu Repositorio Local con GitHub y creacion de la Rama</h4>
+                                <p>Lo primero es iniciar con git init</p>
                                 <p>Para vincular tu repositorio local con un repositorio remoto existente en GitHub, usa el siguiente comando:</p>
                                 <pre><code>git remote add origin (Aqui añades la URL de tu proyecto de github en mi caso: 
                          https://github.com/naberz95/BlogPersonalNaberz)
@@ -154,6 +155,43 @@
                         <p>Publicado el 15 Septiembre, 2024 por Nolberto Gomez</p>
                     </div>
                 </div>
+                <!-- Bloque: Creación de Branches en Git -->
+                <div class="card mb-4 category-tutorial-git">
+                    <img class="card-img-top" src="/img/ramas-branch-en-git-7e72b407-90cc-4b90-8de1-738b155764eb.png" alt="Git Branches">
+                    <div class="card-body">
+                        <h2 class="card-title">Creación de Branches en Git</h2>
+                        <p class="card-text">
+                            En Git, las ramas (o <em>branches</em>) son una característica poderosa que te permite trabajar en diferentes versiones de tu proyecto simultáneamente. Las ramas te permiten desarrollar nuevas funcionalidades, corregir errores o experimentar con nuevas ideas sin afectar la rama principal del proyecto.
+                        </p>
+                        <p>
+                            <strong>¿Por qué usar ramas?</strong>
+                        </p>
+                        <ul>
+                            <li><strong>Desarrollo paralelo:</strong> Permite a varios desarrolladores trabajar en diferentes características o correcciones de manera simultánea.</li>
+                            <li><strong>Pruebas:</strong> Puedes probar nuevas ideas sin afectar la estabilidad de la rama principal.</li>
+                            <li><strong>Gestión de versiones:</strong> Facilita la integración de diferentes versiones y cambios en el proyecto.</li>
+                        </ul>
+                        <p>
+                            <strong>Ejemplo práctico:</strong> Supongamos que estás trabajando en un proyecto y necesitas añadir una nueva funcionalidad. Primero, crea una nueva rama para desarrollar esta funcionalidad:
+                        </p>
+                        <pre><code>git checkout -b nueva-funcionalidad</code></pre>
+                        <p>
+                            Esto crea una nueva rama llamada <code>nueva-funcionalidad</code> y cambia a esa rama. Después de realizar los cambios y confirmar tus modificaciones en esta rama, puedes fusionarla (merge) con la rama principal:
+                        </p>
+                        <pre><code>git checkout main</code></pre>
+                        <pre><code>git merge nueva-funcionalidad</code></pre>
+                        <p>
+                            El comando <code>git merge</code> integra los cambios de la rama <code>nueva-funcionalidad</code> en la rama principal <code>main</code>. Si hay conflictos, Git te pedirá que los resuelvas antes de completar la fusión.
+                        </p>
+                        <p>
+                            Las ramas en Git son esenciales para mantener un flujo de trabajo organizado y eficiente. Utilízalas para experimentar, desarrollar y colaborar en tus proyectos con mayor facilidad.
+                        </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <p>Publicado el 15 Septiembre, 2024 por Nolberto Gomez</p>
+                    </div>
+                </div>
+
                  <!-- Entrada 1: ¿Qué es el Hardware? -->
                  <div class="card mb-4 category-hardware">
                     <img class="card-img-top" src='img/hardware.jpg' alt="Imagen de hardware">
