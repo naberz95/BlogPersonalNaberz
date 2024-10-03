@@ -2,5 +2,5 @@
 Proyecto Universidad mi primer Blog
 
 
-## Blog sobre compuertas lógicas
+## Blog sobre compuertas lógicash asd jd
 
